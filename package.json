@@ -1,26 +1,32 @@
 {
-	"name": "goalie",
-	"version": "1.0.0",
-	"description": "Keep up with the top football teams in realtime.",
-	"main": "lib/cli.js",
-	"bin": {
-		"goalie": "bin/goalie"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"soccer",
-		"scores",
-		"goalie"
-	],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"esm": "^3.2.25",
-		"mock-stdin": "^1.0.0"
-	}
+  "name": "goalie",
+  "version": "1.0.0",
+  "description": "Keep up with the top football teams in realtime.",
+  "main": "lib/cli.js",
+  "bin": {
+    "goalie": "bin/goalie"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "soccer",
+    "scores",
+    "goalie"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "esm": "^3.2.25",
+    "mock-stdin": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
