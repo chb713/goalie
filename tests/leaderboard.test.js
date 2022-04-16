@@ -17,6 +17,21 @@ describe('Leaderboard', () => {
 		expect(leaderboard.matches.length).toBe(0)
 	})
 
+	test('Processes a valid Match successfully', () => {
+		const leaderboard = new Leaderboard()
+		const match = new Match('Aptos FC 2, Monterey United 0')
+
+		leaderboard.processMatch(match)
+		expect(match.teams[0].points).toBe(3)
+		expect(match.teams[1].points).toBe(0)
+	})
+
+	test('Does not have a team when name is null', () => {
+		const leaderboard = new Leaderboard()
+		const result = leaderboard.hasTeam(null)
+		expect(result).toBe(false)
+	})
+
 	test('Closes the leaderboard', () => {
 		const leaderboard = new Leaderboard()
 		const match1 = new Match('Aptos FC 2, Monterey United 0')
@@ -41,6 +56,17 @@ describe('Leaderboard', () => {
 
 		expect(leaderboard.teams.length).toBe(2)
 		expect(leaderboard.matches.length).toBe(1)
+	})
+
+	test('After closing the leaderboard, values are empty', () => {
+		const leaderboard = new Leaderboard()
+		const match = new Match('Monterey United 4, San Jose Earthquakes 3')
+		leaderboard.addMatch(match)
+		leaderboard.close()
+		leaderboard.close()
+
+		expect(leaderboard.teams.length).toBe(0)
+		expect(leaderboard.matches.length).toBe(0)
 	})
 
 	test('Closes the leaderboard and starts a new matchday when all teams have been seen', () => {
