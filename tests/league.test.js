@@ -1,4 +1,4 @@
-import { League, Match } from '../lib/models'
+import { League } from '../lib/models'
 
 describe('League', () => {
 	const league = new League()
@@ -7,7 +7,7 @@ describe('League', () => {
 		expect(league.leaderboard).not.toBe(null)
 	})
 
-	test('Creates new teams on unsuccessful find', () => {
+	test('Creates and returns a new team', () => {
 		const team1 = League.findTeam('Foo')
 		const team2 = League.findTeam('Bar')
 
