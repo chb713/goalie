@@ -26,10 +26,7 @@ describe('Match', () => {
 	})
 
 	test('Processes a valid raw match string that is a draw', () => {
-		const match = new Match('fy9c8has980 70afsvk ,, 1r3 2++ ')
-		expect(match.isValid).toBe(false)
-
-		match.process('Monterey United 2, San Jose Earthquakes 2')
+		const match = new Match('Monterey United 2, San Jose Earthquakes 2')
 		expect(match.isValid).toBe(true)
 		expect(match.isDraw).toBe(true)
 	})
