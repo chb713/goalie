@@ -8,22 +8,13 @@ describe('Leaderboard', () => {
 		expect(leaderboard.size).toBe(3)
 	})
 
-	test('Does not add an invalid match', () => {
-		const leaderboard = new Leaderboard()
-		const match = new Match('fweq 7g80sdphiu o[90iqw++-r   q4390 ui')
-		leaderboard.addMatch(match)
-
-		expect(leaderboard.teams.length).toBe(0)
-		expect(leaderboard.matches.length).toBe(0)
-	})
-
-	test('Processes a valid Match successfully', () => {
+	test('Processes a valid match result successfully', () => {
 		const leaderboard = new Leaderboard()
 		const match = new Match('Aptos FC 2, Monterey United 0')
 
 		leaderboard.processMatch(match)
-		expect(match.teams[0].points).toBe(3)
-		expect(match.teams[1].points).toBe(0)
+		expect(match.teams[0].points).toBe(3) // Winner = 3 points
+		expect(match.teams[1].points).toBe(0) // Loser = 0 points
 	})
 
 	test('Does not have a team when name is null', () => {

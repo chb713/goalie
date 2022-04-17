@@ -3,33 +3,34 @@ import { League } from '../lib/models'
 describe('League', () => {
 	const league = new League()
 
-	test('Sets default leaderboard', () => {
+	test('Creates a default leaderboard', () => {
 		expect(league.leaderboard).not.toBe(null)
 	})
 
-	test('Creates and returns a new team', () => {
-		const team1 = League.findTeam('Foo')
-		const team2 = League.findTeam('Bar')
+	test('Creates a new team', () => {
+		const team1 = League.findTeam('Foo Bar FC')
 
-		expect(team1.name).toBe('Foo')
-		expect(team2.name).toBe('Bar')
+		expect(team1.name).toBe('Foo Bar FC')
 	})
 
-	test('Persists list of league teams', () => {
-		expect(League.teams.length).toBe(2)
+	test('Finds an existing team without creating a new team', () => {
+		const team = League.findTeam('Foo Bar FC')
+
+		expect(team.name).toBe('Foo Bar FC')
+		expect(League.teams.length).toBe(1)
 	})
 
-	test('Returns an existing team on successful find', () => {
-		const team = League.findTeam('Foo')
-
-		expect(team.name).toBe('Foo')
-		expect(League.teams.length).toBe(2)
+	test('Persists a list of league teams', () => {
+		League.findTeam('Team 2')
+		League.findTeam('Team 3')
+		League.findTeam('Team 4')
+		League.findTeam('Team 5')
+		League.findTeam('Team 6')
+		expect(League.teams.length).toBe(6)
 	})
 
 	test('Adds a valid match to the leaderboard', () => {
-		const match = league.addMatch('Aptos FC 2, Monterey United 0')
-
-		expect(match.isValid).toBe(true)
+		league.addMatch('Aptos FC 2, Monterey United 0')
 		expect(league.leaderboard.matches.length).toBe(1)
 	})
 
