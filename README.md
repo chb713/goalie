@@ -91,7 +91,7 @@ npm test
 
 ## Design Document
 
--   See the [System Design Document](https://apptitude.notion.site/Goalie-System-Design-Document-bebb57cbbbe649f8a9ae6cff37c33694) on Notion for further details.
+See the [System Design Document](https://apptitude.notion.site/Goalie-System-Design-Document-bebb57cbbbe649f8a9ae6cff37c33694) on Notion for further details.
 
 ## License
 
