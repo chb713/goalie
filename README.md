@@ -23,7 +23,7 @@ cd ~/Desktop/goalie
 Next, install dependencies using [`npm`](https://www.npmjs.com/):
 
 ```bash
-npm install
+npm i
 ```
 
 ## Running the application
@@ -55,7 +55,7 @@ npm run goalie path/to/my/awesome/file.txt
 
 ### Direct Input
 
-Next, run Goalie with direct input by running Goalie with no arguments:
+Next, use Goalie with direct input by running the command with no arguments:
 
 ```bash
 npm run goalie
