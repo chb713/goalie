@@ -28,6 +28,8 @@ npm install
 
 ## Running the application
 
+### File Input
+
 Get started with Goalie on the command line by doing a test run using the provided `input.txt` sample file:
 
 ```javascript
@@ -44,6 +46,14 @@ Capitola Seahorses, 3 pts
 Felton Lumberjacks, 3 pts
 San Jose Earthquakes, 1 pts
 ```
+
+Any time you'd like to use Goalie with an input file, just use the file path as the first argument for the command:
+
+```
+goalie path/to/my/awesome/file.txt
+```
+
+### Direct Input
 
 Next, run goalie using stdin for input by simply using the 'goalie' command with no arguments:
 
