@@ -1,0 +1,19 @@
+San Jose Earthquakes 3, Santa Cruz Slugs 3
+Capitola Seahorses 1, Aptos FC 0
+Felton Lumberjacks 2, Monterey United 0
+Cupertino FC 2, Oakland Roots 0
+Sonoma Sol 2, Sacramento Republic FC 1
+Felton Lumberjacks 1, Aptos FC 2
+Santa Cruz Slugs 0, Capitola Seahorses 0
+Cupertino FC 1, Sacramento Republic FC 3
+Sonoma Sol 2, Oakland Roots 4
+Monterey United 4, San Jose Earthquakes 2
+Santa Cruz Slugs 2, Aptos FC 3
+San Jose Earthquakes 1, Felton Lumberjacks 4
+Monterey United 1, Capitola Seahorses 0
+Cupertino FC 3, Sacramento Republic FC 3
+Aptos FC 2, Monterey United 0
+Capitola Seahorses 5, San Jose Earthquakes 5
+Santa Cruz Slugs 1, Felton Lumberjacks 1
+Sonoma Sol 5, Oakland Roots 2
+Cupertino FC 3, Sacramento Republic FC 6

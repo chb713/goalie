@@ -13,6 +13,8 @@ describe('Leaderboard', () => {
 		const match = new Match('Aptos FC 2, Monterey United 0')
 
 		leaderboard.processMatch(match)
+		expect(match.teams[0].name).toBe('Aptos FC')
+		expect(match.teams[1].name).toBe('Monterey United')
 		expect(match.teams[0].points).toBe(3) // Winner = 3 points
 		expect(match.teams[1].points).toBe(0) // Loser = 0 points
 	})
@@ -23,7 +25,7 @@ describe('Leaderboard', () => {
 		expect(result).toBe(false)
 	})
 
-	test('Closes the leaderboard', () => {
+	test('Closes the leaderboard properly', () => {
 		const leaderboard = new Leaderboard()
 		const match1 = new Match('Aptos FC 2, Monterey United 0')
 		const match2 = new Match('Capitola Seahorses 5, San Jose Earthquakes 5')
