@@ -1,7 +1,7 @@
 <p>&nbsp;</p>
 <p align="center"><img src="https://s3.amazonaws.com//apptitude.io/goalie/logo.png" width="30%"/></p>
 
-<h2 align="center">⚽️ Realtime football results.</h2>
+<h2 align="center">⚽️ Realtime soccer results.</h2>
 
 ## Table of Contents
 
@@ -77,7 +77,7 @@ Once you have entered a match result, hit return, and Goalie will process the li
 
 If enough results have been entered to determine that a matchday is complete, Goalie will output a leaderboard for the matchday automatically.
 
-**You just started tracking football match results in realtime with Goalie. It's time for a pint! 🍻**
+**You just started tracking soccer match results in realtime with Goalie. It's time for a pint! 🍻**
 
 ## Running Tests
 
