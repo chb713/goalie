@@ -12,11 +12,11 @@
 
 ## Getting Started
 
-First, unzip the Goalie source code file to the directory of your choice, then enter that directory in the terminal of your choice.
+First, unzip the Goalie source code file to a directory, and enter that directory in the terminal of your choice.
 
-In this example, we've unzipped Goalie into a folder on our desktop called **goalie**:
+In this example, we've unzipped Goalie into a directory on our desktop called **goalie**:
 
-```
+```bash
 cd ~/Desktop/goalie
 ```
 
@@ -28,9 +28,9 @@ npm install
 
 ## Running the application
 
-### File Input
+### File-based Input
 
-Get started with Goalie on the command line by doing a test run using the provided `input.txt` sample file:
+Get started with Goalie on the command line by doing a test run using the included `input.txt` sample file:
 
 ```javascript
 npm run goalie samples/input.txt
@@ -47,29 +47,29 @@ Felton Lumberjacks, 3 pts
 San Jose Earthquakes, 1 pts
 ```
 
-Any time you'd like to use Goalie with an input file, just use the file path as the first argument for the command:
+Any time you'd like to use Goalie with a file-based input, just use the file path as the first argument:
 
-```
+```bash
 npm run goalie path/to/my/awesome/file.txt
 ```
 
 ### Direct Input
 
-Next, run goalie using stdin for input by simply using the 'goalie' command with no arguments:
+Next, run Goalie with direct input by running Goalie with no arguments:
 
-```
+```bash
 npm run goalie
 ```
 
 Enter match results one-per-line like so:
 
-```
+```bash
 San Jose Earthquakes 3, Santa Cruz Slugs 3
 ```
 
 The input match result format should be:
 
-```
+```bash
 Team1 Score1, Team2 Score2
 ```
 
@@ -85,7 +85,7 @@ Goalie uses the excellent [Jest](https://jestjs.io) testing framework for tests.
 
 To run Goalie's tests, simply run the following command:
 
-```
+```bash
 npm test
 ```
 
