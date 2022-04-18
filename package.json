@@ -10,6 +10,7 @@
 		"access": "public"
 	},
 	"scripts": {
+		"goalie": "bin/goalie",
 		"test": "jest"
 	},
 	"keywords": [

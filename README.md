@@ -1,7 +1,7 @@
 <p>&nbsp;</p>
 <p align="center"><img src="https://s3.amazonaws.com//apptitude.io/goalie/logo.png" width="30%"/></p>
 
-<h2 align="center">⚽️ Realtime footie results.</h2>
+<h2 align="center">⚽️ Realtime football results.</h2>
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ npm install
 Get started with Goalie on the command line by doing a test run using the provided `input.txt` sample file:
 
 ```javascript
-goalie samples/input.txt
+npm run goalie samples/input.txt
 ```
 
 You should see the input provided by the file, followed by the leaderboard for each matchday once the day is deemed complete.
@@ -50,7 +50,7 @@ San Jose Earthquakes, 1 pts
 Any time you'd like to use Goalie with an input file, just use the file path as the first argument for the command:
 
 ```
-goalie path/to/my/awesome/file.txt
+npm run goalie path/to/my/awesome/file.txt
 ```
 
 ### Direct Input
@@ -58,7 +58,7 @@ goalie path/to/my/awesome/file.txt
 Next, run goalie using stdin for input by simply using the 'goalie' command with no arguments:
 
 ```
-goalie
+npm run goalie
 ```
 
 Enter match results one-per-line like so:
