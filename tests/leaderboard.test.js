@@ -40,13 +40,30 @@ describe('Leaderboard', () => {
 
 	test('Closes the leaderboard and starts a new matchday when a team has already been seen', () => {
 		const leaderboard = new Leaderboard()
-		const match1 = new Match('Monterey United 4, San Jose Earthquakes 3')
-		const match2 = new Match('Capitola Seahorses 2, Santa Cruz Slugs 4')
-		const match3 = new Match('Monterey United 1, Felton Lumberjacks 1')
-		leaderboard.addMatch(match1)
-		leaderboard.addMatch(match2)
-		leaderboard.addMatch(match3)
+		leaderboard.addMatches([
+			new Match('Monterey United 4, San Jose Earthquakes 3'),
+			new Match('Capitola Seahorses 2, Santa Cruz Slugs 4'),
+			new Match('Monterey United 1, Felton Lumberjacks 1'),
+		])
 
+		expect(leaderboard.day).toBe(2)
+		expect(leaderboard.teams.length).toBe(2)
+		expect(leaderboard.matches.length).toBe(1)
+	})
+
+	test('Supports any number of teams in a league', () => {
+		const leaderboard = new Leaderboard()
+
+		leaderboard.addMatches([
+			new Match('Monterey United 4, San Jose Earthquakes 3'),
+			new Match('Capitola Seahorses 2, Santa Cruz Slugs 4'),
+			new Match('Aptos FC 1, Felton Lumberjacks 1'),
+			new Match('Sonoma Sol 5, Oakland Roots 2'),
+			new Match('Cupertino FC 3, Sacramento Republic FC 6'),
+			new Match('Sonoma Sol 5, Oakland Roots 2'),
+		])
+
+		expect(leaderboard.day).toBe(2)
 		expect(leaderboard.teams.length).toBe(2)
 		expect(leaderboard.matches.length).toBe(1)
 	})
